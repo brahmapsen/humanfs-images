@@ -1,10 +1,13 @@
 const fs = require('fs')
+const sdk = require('api')('@curedao/v1.0#lmp2v23l1ecjhnr');
+sdk.auth('demo');
 const { loadImage, createCanvas } = require('canvas')
 const backgroundImg = 'img/human-fs-nft-background.png'
 const width = 1264
 const height = 1264
 const titleFont  = '50pt Comic Sans MS'
 const scoreFont  = '30pt Comic Sans MS'
+
 
 const slugify = (string) => {
    return string
@@ -35,6 +38,10 @@ function addScoreText(context, variableName) {
 
 async function generateImage(variableName, numberOfRectangles) {
    const canvas = createCanvas(width, height)
+
+   sdk.getVariables({variableName: 'Overall%20Mood', limit: '100'})
+       .then(res => console.log(res))
+       .catch(err => console.error(err));
    loadImage(backgroundImg).then((imgData) => {
       const context = canvas.getContext('2d')
       context.drawImage(imgData, 0, 0, width, height)
