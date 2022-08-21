@@ -1,0 +1,24 @@
+{
+  "name": "My First Post",
+  "description": "Health Data",
+  "image": "ipfs://QmPPtEehXLLdbbDscQuwDZjqhaG4zNH5kgvMyYXqbyR2Ki",
+  "attributes": {
+    "gender": "Transgender",
+    "date": "Mar 22 2001",
+    "maritalStatus": "Married",
+    "allergies": [],
+    "currentMedications": [],
+    "symptoms": [],
+    "vitalSigns": {
+      "height": 160,
+      "weight": 70,
+      "heartRate": 60,
+      "temperature": 97,
+      "bloodPressure": {
+        "position": "Standing",
+        "measurement": { "systolic": 120, "diastolic": 80 }
+      },
+      "respiratoryRate": 15
+    }
+  }
+}
